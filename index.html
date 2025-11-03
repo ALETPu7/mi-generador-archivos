@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Archivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 Generador de Archivos</h1>
+        
+        <div class="form-section">
+            <h2>Configura tu archivo</h2>
+            <form id="fileForm">
+                <div class="input-group">
+                    <label for="fileName">Nombre del archivo:</label>
+                    <input type="text" id="fileName" value="mi-archivo" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="fileType">Tipo de archivo:</label>
+                    <select id="fileType">
+                        <option value="txt">Texto (.txt)</option>
+                        <option value="json">JSON (.json)</option>
+                        <option value="csv">CSV (.csv)</option>
+                        <option value="html">HTML (.html)</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="content">Contenido:</label>
+                    <textarea id="content" rows="6" placeholder="Escribe tu contenido aquí..."></textarea>
+                </div>
+                
+                <button type="submit" class="generate-btn">Generar y Descargar</button>
+            </form>
+        </div>
+
+        <div class="quick-actions">
+            <h2>Descargas Rápidas</h2>
+            <button onclick="downloadSample('txt')" class="quick-btn">📄 Ejemplo TXT</button>
+            <button onclick="downloadSample('json')" class="quick-btn">📊 Ejemplo JSON</button>
+            <button onclick="downloadSample('csv')" class="quick-btn">📈 Ejemplo CSV</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
